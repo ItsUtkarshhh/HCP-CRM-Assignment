@@ -1,0 +1,19 @@
+# Node dependencies (frontend)
+node_modules/
+dist/
+.vite/
+
+# Python dependencies & cache (backend)
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+.env.local
+
+# Databases (Local data files should never be pushed)
+*.db
+*.sqlite3
