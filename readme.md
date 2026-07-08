@@ -46,3 +46,51 @@ Ensure you have the following installed on your machine:
 1. Open a terminal window and navigate into the backend folder:
    ```bash
    cd backend
+2. Install the necessary Python packages and dependencies:
+   ```bash
+   pip install -r requirements.txt
+3. Create a .env file directly inside the backend/ directory to store your credentials:
+   ```bash
+   GROQ_API_KEY=your_actual_groq_api_key_here
+4. Fire up the local Uvicorn development server:
+   ```bash
+   uvicorn app.main:app --reload
+
+Note : The automatic OpenAPI interactive schema documentation will now be live at http://127.0.0.1:8000/docs.
+
+### 2. Frontend Environment Configuration
+1. Open a secondary terminal window and navigate into the frontend folder:
+   ```bash
+   cd frontend
+2. Install the necessary node modules and packages:
+   ```bash
+   npm install
+3. Boot up the Vite development build server:
+   ```bash
+   npm run dev
+4. Open your web browser and navigate to the local development address:
+   ```bash
+   http://localhost:5173/
+
+### 3. Repository Exclusion Rules (.gitignore)
+To prevent pushing temporary environment dependencies, local builds, or local database states into source control, ensure a root-level .gitignore file enforces the exclusion of the following assets:
+
+# Node dependencies & local builds
+node_modules/
+dist/
+.vite/
+
+# Python caching & virtual environments
+__pycache__/
+*.pyc
+.venv/
+env/
+venv/
+
+# Environment Variables & Secrets
+.env
+.env.local
+
+# Databases (Local data files should never be pushed)
+*.db
+*.sqlite3
