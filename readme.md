@@ -73,24 +73,16 @@ Note : The automatic OpenAPI interactive schema documentation will now be live a
    http://localhost:5173/
 
 ### 3. Repository Exclusion Rules (.gitignore)
-To prevent pushing temporary environment dependencies, local builds, or local database states into source control, ensure a root-level .gitignore file enforces the exclusion of the following assets:
-
-#### Node dependencies & local builds
-node_modules/
-dist/
-.vite/
-
-#### Python caching & virtual environments
-__pycache__/
-*.pyc
-.venv/
-env/
-venv/
-
-#### Environment Variables & Secrets
-.env
-.env.local
-
-#### Databases (Local data files should never be pushed)
-*.db
-*.sqlite3
+To prevent pushing temporary environment dependencies, local builds, or local database states into source control, ensure a root-level .gitignore file enforces the exclusion of the following assets :
+1. node_modules/
+2. dist/
+3. .vite/
+4. __pycache__/
+5. *.pyc
+6. .venv/
+7. env/
+8. venv/
+9. .env
+10. .env.local
+11. *.db
+12. *.sqlite3
